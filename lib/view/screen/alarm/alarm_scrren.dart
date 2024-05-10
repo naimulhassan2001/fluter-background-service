@@ -3,10 +3,11 @@ import 'dart:convert';
 import 'package:alarm/alarm.dart';
 import 'package:backgroud_fetch/controller/alarm_controller.dart';
 import 'package:backgroud_fetch/model/alarm_model.dart';
+import 'package:backgroud_fetch/view/screen/alarm/inner_widget/alarm_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../services/boxes.dart';
+import '../../../services/boxes.dart';
 
 import 'package:hive_flutter/adapters.dart';
 
@@ -40,11 +41,9 @@ class AlarmScreen extends StatelessWidget {
                   itemCount: box.length,
                   itemBuilder: (context, index) {
                     AlarmModel item = data[index];
-                    return ListTile(
-                      onTap: () => controller.setAlarm(id: item.id, des: "des"),
-                      enabled: true,
-                      title: const Text("Alarm"),
-                      subtitle: Text(item.title),
+                    return AlarmListItem(
+                      index: index,
+                      item: item,
                     );
                   },
                 );

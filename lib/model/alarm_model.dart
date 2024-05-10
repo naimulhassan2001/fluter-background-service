@@ -13,6 +13,12 @@ class AlarmModel extends HiveObject {
   @HiveField(2)
   String description;
 
+  @HiveField(3)
+  bool isOn;
+
   AlarmModel(
-      {required this.id, required this.title, required this.description});
+      {required this.id,
+      required this.title,
+      required this.description,
+      required this.isOn});
 }

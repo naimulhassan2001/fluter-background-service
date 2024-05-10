@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:alarm/alarm.dart';
 import 'package:alarm/model/alarm_settings.dart';
 import 'package:backgroud_fetch/helper/PrefsHelper.dart';
-import 'package:backgroud_fetch/view/screen/alarm_scrren.dart';
+import 'package:backgroud_fetch/view/screen/alarm/alarm_scrren.dart';
 import 'package:flutter/material.dart';
 
 import 'package:background_fetch/background_fetch.dart';

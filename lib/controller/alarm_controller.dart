@@ -67,7 +67,8 @@ class AlarmController extends GetxController {
       final data = AlarmModel(
           title: selectedDateTime.toIso8601String(),
           description: "this alarm set you",
-          id: box.length);
+          id: box.length + 1,
+          isOn: true);
 
       box.add(data);
 
